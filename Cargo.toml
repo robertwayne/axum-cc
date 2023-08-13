@@ -1,0 +1,19 @@
+[package]
+name = "axum-cc"
+authors = ["Rob Wagner <rob@sombia.com>"]
+license = "MIT OR Apache-2.0"
+description = "Tower middleware for adding Cache-Control headers to Axum responses based on MIME types."
+repository = "https://github.com/robertwayne/axum-cc"
+categories = ["web-programming"]
+keywords = ["axum", "tower", "cache-control"]
+readme = "README.md"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+axum = { version = "0.6", default-features = false }
+futures-core = "0.3"
+pin-project-lite = "0.2"
+tower = { version = "0.4", default-features = false }
+tracing = { version = "0.1", default-features = false }
