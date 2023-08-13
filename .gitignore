@@ -1,2 +1,19 @@
-/target
-/Cargo.lock
+# Directories
+.cargo
+.turbo
+assets
+build
+dist
+node_modules
+public
+target
+
+# Files
+.env
+.log
+Cargo.lock
+pnpm-lock.yaml
+
+# User Settings
+.idea
+.vscode
