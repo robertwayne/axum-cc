@@ -152,14 +152,6 @@ where
         if let Some(content_type) = response.headers().get(CONTENT_TYPE) {
             let mime = MimeType::from(content_type);
 
-            if mime == MimeType::HTML {
-                response
-                    .headers_mut()
-                    .insert(CACHE_CONTROL, HeaderValue::from_static("no-cache"));
-
-                return Poll::Ready(Ok(response));
-            }
-
             if this.layer.mime_types.contains(&mime) {
                 let value = format!("public, max-age={}", this.layer.max_age.as_secs());
 
