@@ -22,12 +22,13 @@ use tower::{Layer, Service};
 
 pub use crate::mime::MimeType;
 
-const DEFAULT_MIME_TYPES: [MimeType; 5] = [
+const DEFAULT_MIME_TYPES: [MimeType; 6] = [
     MimeType::CSS,
     MimeType::JS,
     MimeType::SVG,
     MimeType::WEBP,
     MimeType::WOFF2,
+    MimeType::PNG,
 ];
 
 /// A [`tower::Layer`] that sets `Cache-Control` headers on responses.

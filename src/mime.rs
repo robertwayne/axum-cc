@@ -12,6 +12,7 @@ pub enum MimeType {
     TEXT,
     WEBP,
     WOFF2,
+    PNG,
 }
 
 impl MimeType {
@@ -23,6 +24,7 @@ impl MimeType {
             "svg" => MimeType::SVG,
             "webp" => MimeType::WEBP,
             "woff2" => MimeType::WOFF2,
+            "png" => MimeType::PNG,
             _ => MimeType::TEXT,
         }
     }
@@ -36,6 +38,7 @@ impl MimeType {
             MimeType::TEXT => "text/plain",
             MimeType::WEBP => "image/webp",
             MimeType::WOFF2 => "font/woff2",
+            MimeType::PNG => "image/png",
         }
     }
 }
@@ -57,6 +60,7 @@ impl From<&HeaderValue> for MimeType {
             "text/plain" => MimeType::TEXT,
             "image/webp" => MimeType::WEBP,
             "font/woff2" => MimeType::WOFF2,
+            "image/png" => MimeType::PNG,
             _ => MimeType::TEXT,
         }
     }
