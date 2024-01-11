@@ -1,6 +1,6 @@
 use std::fmt::Display;
 
-use axum::http::HeaderValue;
+use http::HeaderValue;
 
 #[allow(clippy::upper_case_acronyms)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]

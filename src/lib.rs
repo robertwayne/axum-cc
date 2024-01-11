@@ -9,16 +9,15 @@ use std::{
     time::Duration,
 };
 
-use axum::{
-    http::{
-        header::{CACHE_CONTROL, CONTENT_TYPE},
-        HeaderValue, Request,
-    },
-    response::Response,
-};
+use axum_core::response::Response;
 use futures_core::ready;
+use http::{
+    header::{CACHE_CONTROL, CONTENT_TYPE},
+    HeaderValue, Request,
+};
 use pin_project_lite::pin_project;
-use tower::{Layer, Service};
+use tower_layer::Layer;
+use tower_service::Service;
 
 pub use crate::mime::MimeType;
 
